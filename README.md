@@ -9,10 +9,12 @@ The Retention Manager(Janet), at PhoneNow sent me a mail enumerating that the co
 
 ## Data Collection and Preparation
 ### Data Sources: 
-The dataset was provided by PWC and it included customer demographic information, account details, and service subscription data, all of which are crucial for identifying churn patterns. View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachments/files/17340030/02.Churn-Dataset.xlsx)
+The dataset was provided by PWC in an Excel worksheet document and it included 7,043 rows and 23 columns which contains customer demographic information, account details, and service subscription data, all of which are crucial for identifying churn patterns. View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachments/files/17340030/02.Churn-Dataset.xlsx)
 
 ### Data Cleaning: 
-The dataset was first cleaned in powerquery to handle missing values, correct inconsistencies, and ensure accuracy. Categorical and numerical variables were transformed and  normalized for model readiness.
+The dataset was first cleaned in powerquery to handle missing values, correct inconsistencies, and ensure accuracy. Categorical and numerical variables were transformed and  normalized for model readiness in Microsoft PowerBI.
+
+I Checked for blank cells and missing values using the column quality check. The Total charges column had 11 empty values(Null), which were replaced with 0 to represent no total charges for those customers.
 
 ### Exploratory Data Analysis (EDA): 
 Initial EDA was conducted to examine distributions, correlations, and trends related to churn, such as the churn rate by tenure, contract type, and payment method. The findings indicated that customer demographics, account information, and service subscriptions were significant contributors to churn behavior.
