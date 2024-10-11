@@ -14,7 +14,8 @@ The dataset was provided by PWC in an Excel worksheet document and it included 7
 ### Data Cleaning: 
 The dataset was first cleaned in powerquery to handle missing values, correct inconsistencies, and ensure accuracy. Categorical and numerical variables were transformed and  normalized for model readiness in Microsoft PowerBI.
 
-I Checked for blank cells and missing values using the column quality check. The Total charges column had 11 empty values(Null), which were replaced with 0 to represent no total charges for those customers.
+- I Checked for blank cells and missing values using the column quality check. The Total charges column had 11 empty values(Null), which were replaced with 0 to represent no total charges for those customers.
+- I changed data type of columns with wrong type to the right one.
 
 ### Exploratory Data Analysis (EDA): 
 Initial EDA was conducted to examine distributions, correlations, and trends related to churn, such as the churn rate by tenure, contract type, and payment method. The findings indicated that customer demographics, account information, and service subscriptions were significant contributors to churn behavior.
