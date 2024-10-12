@@ -20,5 +20,8 @@ The dataset was first cleaned in powerquery to handle missing values, correct in
 
 ### Exploratory Data Analysis (EDA): 
 Initial EDA was conducted to examine distributions, correlations, and trends related to churn, such as the churn rate by tenure, contract type, and payment method. The findings indicated that customer demographics, account information, and service subscriptions were significant contributors to churn behavior.
-
+- Demographics Analysis: Analyzed churn rate by customer demographics, including gender, senior citizen status, and the presence of dependents and partner.
+- Service Usage Analysis: Examined churn rate across different service subscriptions, such as phone service, streaming options, and internet service types (Fiber optic, DSL).
+- Account Information: Investigated how payment methods, monthly charges, and contract types relate to customer churn, with specific focus on month-to-month contracts and 
+  electronic check payments that showed higher churn rates.
 
