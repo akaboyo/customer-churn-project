@@ -16,6 +16,7 @@ The dataset was first cleaned in powerquery to handle missing values, correct in
 
 - I Checked for blank cells and missing values using the column quality check. The Total charges column had 11 empty values(Null), which were replaced with 0 to represent no total charges for those customers.
 - I changed data type of columns with wrong type to the right one.
+- I converted the Tenure column to a conditional column so as to analyse the age of customer contractas in relation to churning. 
 
 ### Exploratory Data Analysis (EDA): 
 Initial EDA was conducted to examine distributions, correlations, and trends related to churn, such as the churn rate by tenure, contract type, and payment method. The findings indicated that customer demographics, account information, and service subscriptions were significant contributors to churn behavior.
