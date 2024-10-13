@@ -1,4 +1,4 @@
-# PWC CUSTOMER CHURN ANALYSIS 
+# CUSTOMER CHURN ANALYSIS 
 
 ## Project Overview
 The primary objective of this project was to analyze customer churn for a telecom client (PhoneNow) and provide actionable insights to help reduce churn rates and improve customer retention. The project was conducted in response to a request from the client’s Retention Manager, who emphasized the high cost of acquiring new customers and the need for a proactive approach to retaining existing customers.
@@ -34,3 +34,56 @@ In addition to data cleaning and transformation, I created DAX measures to deriv
     COUNT(Churn[customerID]),
     0
 ) * 100/100)
+
+2. % SeniorCitizen = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[SeniorCitizen] = 1, Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100 /100)
+
+3. % with Dependents = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[Dependents] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+4. % with DeviceProtection = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[DeviceProtection] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+5. % with MultipleLines = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[MultipleLines] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+6. % with OnlineBackup = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[OnlineBackup] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+7. % with OnlineSecurity = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[OnlineSecurity] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+8. % with Partner = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[Partner] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+9. % with PhoneService = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[PhoneService] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+10. % with StreamingMovies = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[StreamingMovies] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+11. % with StreamingTV = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[StreamingTV] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+12. % with TechSupport = 
+((CALCULATE(COUNT(Churn[customerID]), Churn[TechSupport] = "Yes", Churn[Churn] = "Yes") / 
+CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
+
+13. Count of Churn for Yes = 
+CALCULATE(COUNTA('Churn'[Churn]), 'Churn'[Churn] = "Yes" )
+
+14. CustomerLifetimeValue ($) = 
+CALCULATE(
+    SUM(Churn[MonthlyCharges]) * AVERAGE(Churn[Tenure])
+)
+
