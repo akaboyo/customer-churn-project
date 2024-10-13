@@ -135,3 +135,11 @@ The analysis led to several key insights and strategic recommendations:
       appeal to month-to-month customers.
     - Service Quality Improvement: For fiber optic users, invest in service quality enhancements or bundled packages to increase perceived value.
     - Payment Method Promotions: Provide incentives for customers to switch to more secure payment methods to increase satisfaction and reduce churn rates.
+
+## Implementation and Handover
+After the dashboards were finalized, they were presented to the client with a demonstration of how to navigate and use the filters to explore various scenarios. Training sessions were conducted to ensure that the client’s team can independently monitor and analyze customer churn going forward.
+
+## Conclusion
+By leveraging Power BI, the PwC team provided the telecom client with an insightful and actionable solution to manage customer churn. The dashboards developed serve as powerful tools for the Retention Manager and other stakeholders to understand churn dynamics, implement retention strategies, and ultimately improve customer satisfaction and reduce churn rates.
+
+The dashboards will also enable ongoing monitoring, making it easier for the client to respond to changing trends in customer behavior, ensuring that the retention strategies remain effective and up-to-date.
