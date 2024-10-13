@@ -1,6 +1,6 @@
 # PWC CUSTOMER CHURN ANALYSIS 
 
-## Project Overview and Phases
+## Project Overview
 The primary objective of this project was to analyze customer churn for a telecom client (PhoneNow) and provide actionable insights to help reduce churn rates and improve customer retention. The project was conducted in response to a request from the client’s Retention Manager, who emphasized the high cost of acquiring new customers and the need for a proactive approach to retaining existing customers.
 The analysis was carried out in several key phases, each aimed at building a comprehensive understanding of customer churn and creating self-explanatory dashboards for strategic decision-making.
 
@@ -25,3 +25,12 @@ Initial EDA was conducted to examine distributions, correlations, and trends rel
 - Account Information: Investigated how payment methods, monthly charges, and contract types relate to customer churn, with specific focus on month-to-month contracts and 
   electronic check payments that showed higher churn rates.
 
+#### DAX Measures
+In addition to data cleaning and transformation, I created DAX measures to derive critical insights. These measures encompass calculations for the following:
+
+1. ChurnRate = 
+(DIVIDE(
+    CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes"),
+    COUNT(Churn[customerID]),
+    0
+) * 100/100)
