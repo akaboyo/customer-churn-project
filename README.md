@@ -9,7 +9,8 @@ The Retention Manager(Janet), at PhoneNow sent me a mail enumerating that the co
 
 ## Data Collection and Preparation
 ### Data Sources: 
-The dataset was provided by PWC in an Excel worksheet document and it included 7,043 rows and 23 columns which contains customer demographic information, account details, and service subscription data, all of which are crucial for identifying churn patterns. View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachments/files/17340030/02.Churn-Dataset.xlsx)
+The dataset was provided by PWC in an Excel worksheet document and it included 7,043 rows and 23 columns which contains customer demographic information, account details, and service subscription data, all of which are crucial for identifying churn patterns. 
+View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachments/files/17340030/02.Churn-Dataset.xlsx)
 
 ### Data Cleaning: 
 The dataset was first cleaned in powerquery to handle missing values, correct inconsistencies, and ensure accuracy. Categorical and numerical variables were transformed and  normalized for model readiness in Microsoft PowerBI.
@@ -88,8 +89,49 @@ CALCULATE(
 )
 
 ## Data Visualization
-Data visualization for the Customer Churn analysis was done in Microsoft PowerBI Desktop. Here are the visuals:
+Two interactive dashboards were created in Power BI to provide a detailed view of customer churn and retention:
+
+a) Customer Retention Dashboard
+- Metrics Displayed:
+   - Total customers, number of tickets (tech and admin), total monthly charges, and yearly charges.
+   - Churn by demographic factors and service usage patterns.
+- Visuals:
+   - Pie charts for customer demographics, tenure, and churn by service usage.
+   - Bar charts for churn by payment method, contract type, and tenure in years.
+- Purpose: This dashboard allows the Retention Manager to explore churn across various customer segments and understand which groups are most likely to churn, enabling 
+  targeted interventions.
 
 ![churn report](https://github.com/user-attachments/assets/1188e86b-fb36-4329-a82a-700ac1b83db0)
 
+b) Customer Risk Analysis Dashboard
+- Interactive Filters:
+    - Filters for churn risk, internet service type, tenure in months, and contract type.
+- Visuals:
+    - Churn rate by internet service type, tenure, and payment method.
+    - Churn by customer contract type and monthly charges by internet service type.
+    - Gauge for overall churn rate and total customers with their churn risk status.
+- Purpose: This dashboard provides a dynamic and comprehensive view of the factors influencing churn, enabling the client to isolate high-risk segments and make informed 
+  decisions to address churn risks.
+
 ![customer risk report](https://github.com/user-attachments/assets/feafc544-8f9b-4f0f-9d20-27c1313b50d1)
+
+View the dashboards here - 
+
+## Insights and Recommendations
+The analysis led to several key insights and strategic recommendations:
+
+- High-Risk Customer Segments:
+
+    - Month-to-Month Contracts: Customers with month-to-month contracts had the highest churn rates. Implementing loyalty programs or offering incentives for switching to 
+      longer contracts could help retain these customers.
+    - Fiber Optic Internet Service: Customers with fiber optic service showed a higher likelihood of churning. Reviewing service quality or pricing could help reduce churn in 
+      this group.
+    - Electronic Check Payment: The churn rate was higher among customers using electronic check payment. Encouraging alternative payment methods like credit cards or 
+      paperless billing may improve retention.
+      
+- Retention Strategies:
+
+    - Personalized Offers: Tailor retention offers to high-risk segments based on contract type and tenure. For example, long-term discounts for new contract sign-ups could 
+      appeal to month-to-month customers.
+    - Service Quality Improvement: For fiber optic users, invest in service quality enhancements or bundled packages to increase perceived value.
+    - Payment Method Promotions: Provide incentives for customers to switch to more secure payment methods to increase satisfaction and reduce churn rates.
