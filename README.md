@@ -87,3 +87,7 @@ CALCULATE(
     SUM(Churn[MonthlyCharges]) * AVERAGE(Churn[Tenure])
 )
 
+## Data Visualization
+Data visualization for the data analysis was done in Microsoft Power BI Desktop:
+
+
