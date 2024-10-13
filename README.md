@@ -90,6 +90,6 @@ CALCULATE(
 ## Data Visualization
 Data visualization for the Customer Churn analysis was done in Microsoft PowerBI Desktop. Here are the visuals:
 
-![churn report](https://github.com/user-attachments/assets/89e4196e-e5a5-4a82-9a15-b2227f7b72d7)
+![churn report](https://github.com/user-attachments/assets/1188e86b-fb36-4329-a82a-700ac1b83db0)
 
-![customer risk report](https://github.com/user-attachments/assets/4fa8ba38-2a9e-4b8a-a1e5-974944d43a5c)
+![customer risk report](https://github.com/user-attachments/assets/feafc544-8f9b-4f0f-9d20-27c1313b50d1)
