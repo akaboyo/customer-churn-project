@@ -1,30 +1,41 @@
 # CUSTOMER CHURN ANALYSIS 
 
+## Executive Summary
+
+This project analyses customer churn for a telecom client (PhoneNow) to understand why customers leave and identify patterns that signal churn risk. Using a PwC-provided dataset with customer demographics, account details, and service usage fields, the work combines data cleaning, exploratory analysis, and interactive visualization in Power BI to reveal key churn drivers. The resulting dashboards help stakeholders spot high-risk segments and make data-informed decisions to improve retention strategies and reduce revenue loss from churn
+
 ## Project Overview
-The primary objective of this project was to analyze customer churn for a telecom client (PhoneNow) and provide actionable insights to help reduce churn rates and improve customer retention. The project was conducted in response to a request from the client’s Retention Manager, who emphasized the high cost of acquiring new customers and the need for a proactive approach to retaining existing customers.
-The analysis was carried out in several key phases, each aimed at building a comprehensive understanding of customer churn and creating self-explanatory dashboards for strategic decision-making.
+This project examines customer churn for a telecom company, PhoneNow, with the objective of understanding churn patterns and supporting proactive retention strategies. The analysis uses Power BI to clean, model, and visualise customer behaviours that correlate with churn.
 
-## Problem Statement
-The Retention Manager(Janet), at PhoneNow sent me a mail enumerating that the company faces significant challenges with customer churn, and acquiring new customers is costly and time-consuming. For PhoneNow, the overall churn rate is about a quarter of the total customers, indicating a substantial risk to revenue and long-term customer relationships. Janet has asked me to create visualisation dashboards that analyses customer churn and risks of churn, and provide insights. The insights from this dashboard will be used in communicating findings and recommendations to the Engagement Partner.
+## Business Objective
 
-## Data Collection and Preparation
-### Data Sources: 
-The dataset was provided by PWC in an Excel worksheet document and it included 7,043 rows and 23 columns which contains customer demographic information, account details, and service subscription data, all of which are crucial for identifying churn patterns. 
+- Understand the factors that contribute to customers leaving the service.
+- Provide visual insights to help the Retention Manager and stakeholders focus on high-risk customer segments.
+- Support data-driven decisions to reduce churn and improve retention.
+
+## Data Source
+
+The dataset was provided in Excel format and includes:
+- Customer demographic details
+- Account and service subscription information
+- Billing and contract fields
 View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachments/files/17340030/02.Churn-Dataset.xlsx)
 
-### Data Cleaning: 
-The dataset was first cleaned in powerquery to handle missing values, correct inconsistencies, and ensure accuracy. Categorical and numerical variables were transformed and  normalized for model readiness in Microsoft PowerBI.
+## Data Preparation
 
-- I Checked for blank cells and missing values using the column quality check. The Total charges column had 11 empty values(Null), which were replaced with 0 to represent no total charges for those customers.
-- I changed data type of columns with wrong type to the right one.
-- I converted the Tenure column to a conditional column so as to analyse the age of customer contractas in relation to churning. 
+1. Imported the dataset into Power BI.
+2. Cleaned and transformed columns using Power Query:
+   - Handled missing values (e.g., “Total charges” nulls replaced).
+   - Corrected and standardised data types.
+   - Created derived features like tenure categories for deeper analysis.
 
-### Exploratory Data Analysis (EDA): 
-Initial EDA was conducted to examine distributions, correlations, and trends related to churn, such as the churn rate by tenure, contract type, and payment method. The findings indicated that customer demographics, account information, and service subscriptions were significant contributors to churn behavior.
-- Demographics Analysis: Analyzed churn rate by customer demographics, including gender, senior citizen status, and the presence of dependents and partner.
-- Service Usage Analysis: Examined churn rate across different service subscriptions, such as phone service, streaming options, and internet service types (Fiber optic, DSL).
-- Account Information: Investigated how payment methods, monthly charges, and contract types relate to customer churn, with specific focus on month-to-month contracts and 
-  electronic check payments that showed higher churn rates.
+## Exploratory Data Analysis (EDA): 
+
+The dataset was analysed across key segments:
+- **Demographics:** churn by age, gender, partner/dependents
+- **Contracts:** churn by contract type (month-to-month, yearly, etc.)
+- **Services:** churn patterns across internet service types and add-ons
+- **Billing:** payment method and monthly charge correlations with churn 
 
 #### DAX Measures
 In addition to data cleaning and transformation, I created DAX measures to derive critical insights. These measures encompass calculations for the following:
@@ -139,7 +150,6 @@ The analysis led to several key insights and strategic recommendations:
 ## Implementation and Handover
 After the dashboards were finalized, they were presented to the client with a demonstration of how to navigate and use the filters to explore various scenarios. Training sessions were conducted to ensure that the client’s team can independently monitor and analyze customer churn going forward.
 
-## Conclusion
-By leveraging Power BI, the PwC team provided the telecom client with an insightful and actionable solution to manage customer churn. The dashboards developed serve as powerful tools for the Retention Manager and other stakeholders to understand churn dynamics, implement retention strategies, and ultimately improve customer satisfaction and reduce churn rates.
+## Business Implications
 
-The dashboards will also enable ongoing monitoring, making it easier for the client to respond to changing trends in customer behavior, ensuring that the retention strategies remain effective and up-to-date.
+These insights suggest that churn is driven more by contract structure, pricing, and customer lifecycle stage than by demographic characteristics. Retention strategies should therefore prioritize early-stage customers, promote longer-term contracts, incentivize automated payments, and closely monitor high-value customers on flexible plans.
