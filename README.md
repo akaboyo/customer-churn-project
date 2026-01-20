@@ -1,5 +1,7 @@
 # CUSTOMER CHURN ANALYSIS 
 
+![Image](https://github.com/user-attachments/assets/efba1050-5912-4ca3-a4e2-8411d23a0346)
+
 ## Executive Summary
 
 This project analyses customer churn for a telecom client (PhoneNow) to understand why customers leave and identify patterns that signal churn risk. Using a PwC-provided dataset with customer demographics, account details, and service usage fields, the work combines data cleaning, exploratory analysis, and interactive visualization in Power BI to reveal key churn drivers. The resulting dashboards help stakeholders spot high-risk segments and make data-informed decisions to improve retention strategies and reduce revenue loss from churn
