@@ -33,11 +33,10 @@ that let the Retention team isolate high-risk segments instead of guessing at th
 - [Data Preparation](#data-preparation)
 - [Dashboards](#dashboards)
 - [Key Insights](#key-insights)
-- [Recommendations](#recommendations)
+- [Recommendation](#recommendation)
 - [Business Impact](#business-impact)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools](#tools)
-
 
 ## Business Objective
 
@@ -61,106 +60,27 @@ View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachment
    - Handled missing values (e.g., “Total charges” nulls replaced).
    - Corrected and standardised data types.
    - Created derived features like tenure categories for deeper analysis.
+3. Built 14 DAX measures to power the dashboards — churn rate, customer lifetime value, and service-adoption breakdowns among them.
 
-## Exploratory Data Analysis (EDA): 
-
-The dataset was analysed across key segments:
-- **Demographics:** churn by age, gender, partner/dependents
-- **Contracts:** churn by contract type (month-to-month, yearly, etc.)
-- **Services:** churn patterns across internet service types and add-ons
-- **Billing:** payment method and monthly charge correlations with churn 
-
-#### DAX Measures
-In addition to data cleaning and transformation, I created DAX measures to derive critical insights. These measures encompass calculations for the following:
-
-1. ChurnRate = 
-(DIVIDE(
-    CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes"),
-    COUNT(Churn[customerID]),
-    0
-) * 100/100)
-
-2. % SeniorCitizen = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[SeniorCitizen] = 1, Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100 /100)
-
-3. % with Dependents = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[Dependents] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-4. % with DeviceProtection = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[DeviceProtection] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-5. % with MultipleLines = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[MultipleLines] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-6. % with OnlineBackup = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[OnlineBackup] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-7. % with OnlineSecurity = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[OnlineSecurity] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-8. % with Partner = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[Partner] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-9. % with PhoneService = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[PhoneService] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-10. % with StreamingMovies = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[StreamingMovies] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-11. % with StreamingTV = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[StreamingTV] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-12. % with TechSupport = 
-((CALCULATE(COUNT(Churn[customerID]), Churn[TechSupport] = "Yes", Churn[Churn] = "Yes") / 
-CALCULATE(COUNT(Churn[customerID]), Churn[Churn] = "Yes")) * 100/100)
-
-13. Count of Churn for Yes = 
-CALCULATE(COUNTA('Churn'[Churn]), 'Churn'[Churn] = "Yes" )
-
-14. CustomerLifetimeValue ($) = 
-CALCULATE(
-    SUM(Churn[MonthlyCharges]) * AVERAGE(Churn[Tenure])
-)
+Full formulas: [`/docs/dax-measures.md`](docs/dax-measures.md)
 
 ## Data Visualization
-Two interactive dashboards were created in Power BI to provide a detailed view of customer churn and retention:
 
-a) Customer Retention Dashboard
-- Metrics Displayed:
-   - Total customers, number of tickets (tech and admin), total monthly charges, and yearly charges.
-   - Churn by demographic factors and service usage patterns.
-- Visuals:
-   - Pie charts for customer demographics, tenure, and churn by service usage.
-   - Bar charts for churn by payment method, contract type, and tenure in years.
-- Purpose: This dashboard allows the Retention Manager to explore churn across various customer segments and understand which groups are most likely to churn, enabling 
-  targeted interventions.
+### Customer Retention Dashboard
+
+A full view of who's churning and why - demographics, account information, and service subscriptions in one place, so the Retention team can explore churn across any customer segment.
 
 ![churn report](https://github.com/user-attachments/assets/1188e86b-fb36-4329-a82a-700ac1b83db0)
 
-b) Customer Risk Analysis Dashboard
-- Interactive Filters:
-    - Filters for churn risk, internet service type, tenure in months, and contract type.
-- Visuals:
-    - Churn rate by internet service type, tenure, and payment method.
-    - Churn by customer contract type and monthly charges by internet service type.
-    - Gauge for overall churn rate and total customers with their churn risk status.
-- Purpose: This dashboard provides a dynamic and comprehensive view of the factors influencing churn, enabling the client to isolate high-risk segments and make informed 
-  decisions to address churn risks.
+### Customer Risk Analysis Dashboard
+
+An interactive, filterable view built specifically to isolate high-risk segments - filter by churn risk, internet service type, tenure, or contract type to see exactly where retention effort will have the most impact.
 
 ![customer risk report](https://github.com/user-attachments/assets/feafc544-8f9b-4f0f-9d20-27c1313b50d1)
 
 [View the dashboards here](https://app.powerbi.com/view?r=eyJrIjoiMTg3MThkNmItN2IyYy00ZDZjLWEzZTgtYzk5NzU4MTcwMDlkIiwidCI6ImFlNmFhZDgzLWRmNmYtNDkwZi1iMTU5LWNhZDVjNjUyYjhmMCJ9)
 
+**[Explore both dashboards live on Power BI](https://app.powerbi.com/view?r=eyJrIjoiMTg3MThkNmItN2IyYy00ZDZjLWEzZTgtYzk5NzU4MTcwMDlkIiwidCI6ImFlNmFhZDgzLWRmNmYtNDkwZi1iMTU5LWNhZDVjNjUyYjhmMCJ9)**
 ## Insights and Recommendations
 The analysis led to several key insights and strategic recommendations:
 
