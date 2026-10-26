@@ -1,26 +1,57 @@
-# CUSTOMER CHURN ANALYSIS 
-
 ![Image](https://github.com/user-attachments/assets/efba1050-5912-4ca3-a4e2-8411d23a0346)
+
+# CUSTOMER CHURN ANALYSIS 
+**Why are PhoneNow customers leaving, and which segments should Retention focus on first?**
+
+An end-to-end churn analysis built in Power BI for a telecom client, using PwC-provided customer data.
+
+## VERDICT
+**Churn is concentrated, not random.** 26.54% of PhoneNow's 7,043 customers have churned-and that risk is heavily loaded onto three identifiable groups: **month-to-month contract holders**, **fiber optic subscribers**, and customers paying by **electronic check**. Fixing retention for those three segments alone would address the majority of churn risk, rather than requiring a broad, unfocused retention campaign.
 
 ## Executive Summary
 
-This project analyses customer churn for a telecom client (PhoneNow) to understand why customers leave and identify patterns that signal churn risk. Using a PwC-provided dataset with customer demographics, account details, and service usage fields, the work combines data cleaning, exploratory analysis, and interactive visualization in Power BI to reveal key churn drivers. The resulting dashboards help stakeholders spot high-risk segments and make data-informed decisions to improve retention strategies and reduce revenue loss from churn
+**PhoneNow,** a telecom provider, needed to understand why customers were leaving and where to focus
+retention spend. Using a PwC-provided dataset of customer demographics, account details, and
+service usage, I cleaned and modeled the data in Power BI and built two interactive dashboards
+that let the Retention team isolate high-risk segments instead of guessing at them.
 
-## Project Overview
-This project examines customer churn for a telecom company, PhoneNow, with the objective of understanding churn patterns and supporting proactive retention strategies. The analysis uses Power BI to clean, model, and visualise customer behaviours that correlate with churn.
+**The headline numbers:**
+
+| Metric | Value |
+|---|---|
+| Total customers | 7,043 |
+| Overall churn rate | 26.54% |
+| Total charges | $16.06M |
+| Highest-risk contract type | Month-to-month |
+| Highest-risk internet service | Fiber optic (41.89% churn rate) |
+| Highest-risk payment method | Electronic check |
+
+## Table of Contents
+
+- [Business Objective](#business-objective)
+- [Data Source](#data-source)
+- [Data Preparation](#data-preparation)
+- [Dashboards](#dashboards)
+- [Key Insights](#key-insights)
+- [Recommendations](#recommendations)
+- [Business Impact](#business-impact)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Tools](#tools)
+
 
 ## Business Objective
 
 - Understand the factors that contribute to customers leaving the service.
 - Provide visual insights to help the Retention Manager and stakeholders focus on high-risk customer segments.
-- Support data-driven decisions to reduce churn and improve retention.
+- Support data-driven decisions to reduce churn, improve retention, and protect revenue.
 
 ## Data Source
 
-The dataset was provided in Excel format and includes:
+The dataset was provided by PwC in Excel format and includes:
 - Customer demographic details
 - Account and service subscription information
 - Billing and contract fields
+
 View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachments/files/17340030/02.Churn-Dataset.xlsx)
 
 ## Data Preparation
