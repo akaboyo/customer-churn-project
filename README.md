@@ -62,7 +62,7 @@ View the dataset here [02 Churn-Dataset.xlsx](https://github.com/user-attachment
    - Created derived features like tenure categories for deeper analysis.
 3. Built 14 DAX measures to power the dashboards — churn rate, customer lifetime value, and service-adoption breakdowns among them.
 
-Full formulas: [dax-measures.md](https://github.com/user-attachments/files/33964871/dax-measures.md)
+View the full dax formulas here: [dax-measures.md](https://github.com/user-attachments/files/33964871/dax-measures.md)
 
 ## Data Visualization
 
