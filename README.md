@@ -78,31 +78,37 @@ An interactive, filterable view built specifically to isolate high-risk segments
 
 ![customer risk report](https://github.com/user-attachments/assets/feafc544-8f9b-4f0f-9d20-27c1313b50d1)
 
-[View the dashboards here](https://app.powerbi.com/view?r=eyJrIjoiMTg3MThkNmItN2IyYy00ZDZjLWEzZTgtYzk5NzU4MTcwMDlkIiwidCI6ImFlNmFhZDgzLWRmNmYtNDkwZi1iMTU5LWNhZDVjNjUyYjhmMCJ9)
+**[View the dashboards live on PowerBi](https://app.powerbi.com/view?r=eyJrIjoiMTg3MThkNmItN2IyYy00ZDZjLWEzZTgtYzk5NzU4MTcwMDlkIiwidCI6ImFlNmFhZDgzLWRmNmYtNDkwZi1iMTU5LWNhZDVjNjUyYjhmMCJ9)**
 
-**[Explore both dashboards live on Power BI](https://app.powerbi.com/view?r=eyJrIjoiMTg3MThkNmItN2IyYy00ZDZjLWEzZTgtYzk5NzU4MTcwMDlkIiwidCI6ImFlNmFhZDgzLWRmNmYtNDkwZi1iMTU5LWNhZDVjNjUyYjhmMCJ9)**
-## Insights and Recommendations
-The analysis led to several key insights and strategic recommendations:
+## Key Insights
 
-- High-Risk Customer Segments:
+- **Month-to-month contracts churn far more than annual ones.** Customers on flexible, no-commitment plans are the single largest churn-risk group - however, the churn rate drops sharply moving from month-to-month to one-year to two-year contracts.
+- **Fiber optic customers churn at the rate of 28% higher than DSL customers** (43.96% vs. 34.37%), despite fiber typically being the premium, higher-margin product - a signal worth investigating on price or service-quality grounds rather than assuming premium service means low churn risk.
+- **Electronic check payers churn more than any other payment method**, ahead of mailed check, bank transfer, and credit card - a friction or engagement signal, not just a billing preference.
+- Demographic factors (age, gender, dependents) showed **weaker correlation with churn** than contract structure and billing behavior - meaning retention strategy should be built around account structure, not customer profile.
 
-    - Month-to-Month Contracts: Customers with month-to-month contracts had the highest churn rates. Implementing loyalty programs or offering incentives for switching to 
-      longer contracts could help retain these customers.
-    - Fiber Optic Internet Service: Customers with fiber optic service showed a higher likelihood of churning. Reviewing service quality or pricing could help reduce churn in 
-      this group.
-    - Electronic Check Payment: The churn rate was higher among customers using electronic check payment. Encouraging alternative payment methods like credit cards or 
-      paperless billing may improve retention.
-      
-- Retention Strategies:
+## Recommendations
 
-    - Personalized Offers: Tailor retention offers to high-risk segments based on contract type and tenure. For example, long-term discounts for new contract sign-ups could 
-      appeal to month-to-month customers.
-    - Service Quality Improvement: For fiber optic users, invest in service quality enhancements or bundled packages to increase perceived value.
-    - Payment Method Promotions: Provide incentives for customers to switch to more secure payment methods to increase satisfaction and reduce churn rates.
+- **Month-to-month customers:** introduce loyalty incentives or pricing benefits for switching to annual contracts - this is the largest, most addressable churn segment.
+- **Fiber optic customers:** investigate service quality and pricing perception; a churn rate this high, on a premium product, points to a fixable gap rather than an inherent fiber-customer trait.
+- **Electronic check payers:** promote a switch to autopay or card-based billing, which correlates with materially lower churn across the dataset.
 
-## Implementation and Handover
-After the dashboards were finalized, they were presented to the client with a demonstration of how to navigate and use the filters to explore various scenarios. Training sessions were conducted to ensure that the client’s team can independently monitor and analyze customer churn going forward.
+## Business Impact
 
-## Business Implications
+These Insights suggest that churn is driven more by **contract structure, pricing, and billing behavior** than by customer demographics - which means retention strategy can be targeted rather than broad. Prioritizing early-tenure, month-to-month, fiber-optic customers on manual payment methods should capture the majority of addressable churn risk without a blanket, unfocused retention campaign.
 
-These insights suggest that churn is driven more by contract structure, pricing, and customer lifecycle stage than by demographic characteristics. Retention strategies should therefore prioritize early-stage customers, promote longer-term contracts, incentivize automated payments, and closely monitor high-value customers on flexible plans.
+## Skills Demonstrated
+
+`Power BI` • `Power Query (ETL)` • `DAX` • `Data Cleaning & Modeling` • `Customer Segmentation` • `Dashboard Design` • `Churn Analysis` 
+• `Stakeholder Communication` • `Business Recommendation Writing`
+
+## Tools
+
+- **Power BI** — data modeling, DAX measures, interactive dashboards
+- **Power Query** — data cleaning and transformation
+
+### Portfolio project - Customer churn analysis for PhoneNow
+
+
+
+
