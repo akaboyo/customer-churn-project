@@ -83,7 +83,7 @@ An interactive, filterable view built specifically to isolate high-risk segments
 ## Key Insights
 
 - **Month-to-month contracts churn far more than annual ones.** Customers on flexible, no-commitment plans are the single largest churn-risk group - however, the churn rate drops sharply moving from month-to-month to one-year to two-year contracts.
-- **Fiber optic customers churn at the rate of 28% higher than DSL customers** (43.96% vs. 34.37%), despite fiber typically being the premium, higher-margin product - a signal worth investigating on price or service-quality grounds rather than assuming premium service means low churn risk.
+- **Fiber optic customers churn at almost 42%, against about 19% for DSL customers, more than double** (41.89% vs. 18.96%), despite fiber typically being the premium, higher-margin product - a signal worth investigating on price or service-quality grounds rather than assuming premium service means low churn risk.
 - **Electronic check payers churn more than any other payment method**, ahead of mailed check, bank transfer, and credit card - a friction or engagement signal, not just a billing preference.
 - Demographic factors (age, gender, dependents) showed **weaker correlation with churn** than contract structure and billing behavior - meaning retention strategy should be built around account structure, not customer profile.
 
